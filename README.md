@@ -1,6 +1,6 @@
 # OOP
 
-__Kódy__:
+__Kódy__: <br/>
 **Deklarace čistě abstraktní třídy A s konstruktorem, destruktorem a dvěma dalšími metodami:**
 ```
 class A {
