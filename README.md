@@ -556,7 +556,7 @@ Podtřída může implementovat virtuální metody z nadtřídy s vlastním chov
     - Pak je to totéž jako „interface“
 
 
-__Kódy__: <br/>
+# Kódy:
 ## Deklarace čistě abstraktní třídy A s konstruktorem, destruktorem a dvěma dalšími metodami:
 ```c++
 class A {
