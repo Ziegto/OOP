@@ -275,7 +275,7 @@
 ## Jak můžeme v C++ důsledně odlišovat práci s členskými položkami tříd a instancí?
 
 - Konvence pro práci s daty tříd
-    - Instanční data/metody: voláme instanci a `>`
+    - Instanční data/metody: voláme instanci a `->`
     - Třídní data/metody: voláme třídu a `::`
 
 ## Potřebuje třída v roli objektu konstruktor resp. destruktor a proč?
