@@ -422,10 +422,59 @@ Podtřída může implementovat virtuální metody z nadtřídy s vlastním chov
 - Shadowing (method hiding)
     - Jde o statické překrytí, kdy nová metoda potomka „zastíní“ metodu předka
     - Dílčí chování objektu tedy odpovídá třídě, v jejíž roli vystupuje
+```c++
+#include <iostream>
+
+class Animal {
+public:
+    void sound() {
+        std::cout << "Animal makes a sound." << std::endl;
+    }
+};
+
+class Cat : public Animal {
+public:
+    void sound() {
+        std::cout << "Cat says Meow." << std::endl;
+    }
+};
+
+int main() {
+    Animal* animal = new Cat();
+    animal->sound();  // Výstup: "Animal makes a sound."
+    
+    delete animal;
+    return 0;
+}
+```
 - Overriding
     - Jde o dynamické překrytí, kdy se vždy (i v roli předka) použije metoda potomka, pokud ji má implementovanou
     - Dílčí chování objektu tedy odpovídá třídě, jejíž je tento objekt instancí
+```c++
+#include <iostream>
 
+class Animal {
+public:
+    virtual void sound() {
+        std::cout << "Animal makes a sound." << std::endl;
+    }
+};
+
+class Cat : public Animal {
+public:
+    void sound() override {
+        std::cout << "Cat says Meow." << std::endl;
+    }
+};
+
+int main() {
+    Animal* animal = new Cat();
+    animal->sound();  // Výstup: "Cat says Meow."
+    
+    delete animal;
+    return 0;
+}
+```
 ## Co rozumíme polymorfismem a s čím to souvisí?
 
 - Polymorfismus je schopnost objektu vystupovat v různých rolích a podle toho se chovat
